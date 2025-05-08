@@ -15,6 +15,9 @@ docker run -it --user=user --network=host -v /tmp/.X11-unix:/tmp.X11-unix:rw --e
 docker run -it --user=user --net=host --ipc=host -v /tmp/.X11-unix:/tmp.X11-unix:rw --env=DISPLAY ros2_jazzy
 
 docker run -it --user=user --net=host --ipc=host -v /home/jetson/qubot-dev/ros2_ws:/home/user/ros2_ws -v /tmp/.X11-unix:/tmp.X11-unix:rw --env=DISPLAY -v /dev:/dev --device-cgroup-rule='c 13:* rmw' --device-cgroup-rule='c 166:* rmw' --device-cgroup-rule='c 188:* rmw' -v /dev/bus/usb:/dev/bus/usb --device-cgroup-rule='c 189:* rmw' --device /dev/video0 ros2_jazzy
-docker run -it --user=user --net=host --ipc=host -v /home/user/ros2_ws:/home/user/ros2_ws -v /tmp/.X11-unix:/tmp.X11-unix:rw --env=DISPLAY -v /dev:/dev --device-cgroup-rule='c 13:* rmw' --device-cgroup-rule='c 166:* rmw' --device-cgroup-rule='c 188:* rmw' -v /dev/bus/usb:/dev/bus/usb --device-cgroup-rule='c 189:* rmw' --device /dev/video0 ros2_jazzy
+
+docker run -it --user=user --net=host --ipc=host -v /home/user/ros2_ws:/home/user/ros2_ws -v /tmp/.X11-unix:/tmp.X11-unix:rw --env=DISPLAY -v /dev:/dev --device-cgroup-rule='c 13:* rmw' --device-cgroup-rule='c 166:* rmw' --device-cgroup-rule='c 188:* rmw' -v /dev/bus/usb:/dev/bus/usb --device-cgroup-rule='c 189:* rmw' --device /dev/video0 --name qubot ros2_jazzy
+
+docker run -it --user=user --net=host --ipc=host -v /home/user/ros2_ws:/home/user/ros2_ws -v /tmp/.X11-unix:/tmp.X11-unix:rw --env=DISPLAY -v /dev:/dev --device-cgroup-rule='c 13:* rmw' --device-cgroup-rule='c 166:* rmw' --device-cgroup-rule='c 188:* rmw' -v /dev/bus/usb:/dev/bus/usb --device-cgroup-rule='c 189:* rmw' --name qubot ros2_jazzy
 
 

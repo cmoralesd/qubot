@@ -52,6 +52,7 @@ RUN apt-get update \
 # other instalations required with non-sudo privileges
 USER $USERNAME
 RUN pip install modbus-crc --break-system-packages
+RUN pip install pymodbus --break-system-packages
 RUN pip install inputs --break-system-packages
 RUN pip install opencv-python --break-system-packages
 USER root

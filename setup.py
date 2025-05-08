@@ -28,6 +28,7 @@ setup(
     entry_points={
         'console_scripts': [
             'zlac8015d_bridge = qubot.zlac8015d_bridge:main',
+            'arduino_bridge = qubot.arduino_bridge:main',
             'camera_publisher = qubot.camera_publisher:main',
             'camera_subscriber = qubot.camera_subscriber:main',
         ],
